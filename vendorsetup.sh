@@ -12,10 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/samsung/msm7x27a-common/msm7x27a.mk
-
-# Initlogo
-PRODUCT_COPY_FILES += \
-    device/samsung/royssnfc/ramdisk/initlogo.rle:root/initlogo.rle
-
-$(call inherit-product, vendor/samsung/royssnfc/royss-vendor.mk)
+add_lunch_combo cm_royss-userdebug

@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,14 +15,10 @@
 # BoardConfig.mk
 #
 
-## Kernel, bootloader etc.
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
-TARGET_KERNEL_SOURCE := kernel/samsung/msm7x27a-oc
-TARGET_KERNEL_CONFIG := cyanogenmod_royss_defconfig_nfc
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
-BOARD_KERNEL_BASE := 0x00200000
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01300000
-BOARD_KERNEL_PAGESIZE := 4096
+include device/samsung/msm7x27a-common/BoardConfigCommon.mk
 
-include device/samsung/msm7x27a-common/BoardConfig.mk
+## Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := royss
+
+## Kernel
+TARGET_KERNEL_CONFIG := cyanogenmod_royss_debug_defconfig
