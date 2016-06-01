@@ -20,14 +20,15 @@ PRODUCT_COPY_FILES += \
 
 ## NFC
 PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    NfcNci \
+    nfc_nci.msm7x27a \
+    Tag
 
 ## NFC permissions
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 
 # NFCEE access control
@@ -37,6 +38,7 @@ else
     NFCEE_ACCESS_PATH := device/samsung/royssnfc/nfc/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
+    device/samsung/royssnfc/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 $(call inherit-product, vendor/samsung/royssnfc/royssnfc-vendor.mk)

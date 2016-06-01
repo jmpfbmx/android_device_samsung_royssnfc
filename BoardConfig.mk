@@ -20,5 +20,10 @@ include device/samsung/msm7x27a-common/BoardConfigCommon.mk
 ## Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := royss
 
+
+## NFC
+BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_HAL_SUFFIX := msm7x27a
+
 ## Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_royss_debug_defconfig
