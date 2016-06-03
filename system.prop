@@ -1,0 +1,18 @@
+#
+# system.prop for royss
+#
+
+# RIL
+rild.libargs=-d /dev/smd0
+
+# Call Recording
+persist.call_recording.enabled=1
+
+# Media
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=false
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
