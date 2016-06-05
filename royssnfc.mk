@@ -20,9 +20,6 @@ PRODUCT_COPY_FILES += \
 
 ## NFC
 PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
-    Nfc \
     com.android.nfc_extras \
     NfcNci \
     nfc_nci.msm7x27a \
