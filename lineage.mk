@@ -36,7 +36,11 @@ PRODUCT_MODEL := GT-S6310N
 PRODUCT_MANUFACTURER := samsung
 
 #Set build fingerprint / ID / Prduct Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=royss TARGET_DEVICE=royss BUILD_FINGERPRINT=samsung/royssub/royss:4.4.4/KTU84Q/S6310NUBANH3:user/release-keys PRIVATE_BUILD_DESC="royssub-user 4.4.4 KTU84Q S6310NUBANH3 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=royss \
+    TARGET_DEVICE=royss \
+    BUILD_FINGERPRINT=samsung/royssub/royss:4.4.4/KTU84Q/S6310NUBANH3:user/release-keys \
+    PRIVATE_BUILD_DESC="royssub-user 4.4.4 KTU84Q S6310NUBANH3 release-keys"
 
 UTC_DATE := $(shell date +%s)
 DATE := $(shell date +%Y%m%d)
